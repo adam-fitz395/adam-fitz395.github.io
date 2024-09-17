@@ -28,13 +28,17 @@ body {
 
 .main {
     font-family: 'Arcade';
+    padding: 6px;
 }
 
-li {
+.navbar li {
     display: inline;
     font-family: 'Arcade';
-    padding: 3px;
+    border: 3px white dotted;
+    padding: 6px;
     color: white;
+    text-align: left;
+    margin: 5px;
 }
 
 a:visited {
@@ -45,3 +49,16 @@ a:visited {
 img {
     border: 3px dotted white;
 }
+
+@media screen and (max-width: 580px) {
+    .navbar {
+      float: left;
+      align-items: left;
+    }
+    .navbar li {
+      float: none;
+      display: block;
+      text-align: left;
+      margin: 10px;
+    }
+  }
