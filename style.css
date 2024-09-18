@@ -31,6 +31,10 @@ body {
     padding: 6px;
 }
 
+.emphasis {
+    color: #ff5050;
+}
+
 .navbar li {
     display: inline;
     font-family: 'Arcade';
