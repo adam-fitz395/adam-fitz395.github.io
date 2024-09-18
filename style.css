@@ -6,24 +6,23 @@
 @font-face {
     font-family: "Classica Bold";
     src: url("src/font/Classica-Bold.ttf");
-    
 }
 
 @font-face {
     font-family: "Inter";
     src: url("src/font/Inter-VariableFont_slnt,wght.ttf");
-    
 }
 
 @font-face {
     font-family: "Arcade";
     src: url("src/font/ARCADE_I.TTF");
-    
 }
 
 body {
     background-color: black;
     color: white;
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Fallback font for body */
 }
 
 .main {
@@ -32,17 +31,29 @@ body {
 }
 
 .emphasis {
-    color: #ff5050;
+    color: #f80f13;
+}
+
+.navbar {
+    display: flex; /* Use flexbox for better alignment */
+    justify-content: left; /* Center navbar items */
+    flex-wrap: wrap; /* Wrap items for smaller screens */
+    padding: 5px; /* Add padding to navbar for spacing */
 }
 
 .navbar li {
-    display: inline;
     font-family: 'Arcade';
-    border: 3px white dotted;
-    padding: 6px;
     color: white;
-    text-align: left;
-    margin: 5px;
+    display: inline;
+    text-align: center; /* Center text */
+    border: 3px white dotted; /* Optional: border on the navbar */
+    margin: 5px; /* Margin between items */
+    padding: 10px; /* Padding for touch targets */
+    background: rgba(255, 255, 255, 0.1); /* Optional: slight background for visibility */
+}
+
+.navbar ul {
+    list-style-type: none;
 }
 
 a:visited {
@@ -52,17 +63,19 @@ a:visited {
 
 img {
     border: 3px dotted white;
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 850px) {
     .navbar {
-      float: left;
-      align-items: left;
+        align-items: center; /* Center navbar items */
     }
+
     .navbar li {
-      float: none;
-      display: block;
-      text-align: left;
-      margin: 10px;
+        display: block;
+        margin: 10px 0; /* Vertical spacing */
+        padding: 10px; /* More padding for touch targets */
+        width: 100%; /* Full width for each item */
     }
-  }
+}
