@@ -37,6 +37,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/adam-fitz395/MUL-T" target="_blank">
+                            <img src="src/imgs/github-mark-white.png" alt="GitHub" style="width: 20px; vertical-align: text-top; margin-right: 5px;">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -243,6 +248,9 @@
             // Add click event to all nav links
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
+                    if (this.href.startsWith('http')) {
+                        return; // Let the browser handle normally
+                    }
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     const targetSection = document.querySelector(targetId);
