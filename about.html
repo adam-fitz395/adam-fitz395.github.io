@@ -1,51 +1,120 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Adam's Website - About Me</title>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    </head>
-    
-    <header>
-        <div class = navbar>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="interests.html">Interests</a></li>
-                <li><a href="contact.html">Contacts</a></li>
-            </ul>
-        </div>
-    </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam's Website - About Me</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
-        <div class = main>
-            <h1>About Me</h1>
-            <div class = intro>
-                <h2>Who am I?</h2>
-                <p>My name is Adam Fitzpatrick. I'm a 4th year student currently studying Software Development at SETU Carlow. I'm currently living in Ireland with my family.</p>
-                <h2>Education</h2>
-                <p>As a child I went to Ballyfin N.S. for my primary education. For my secondary education I went to St. Mary's CBS Portlaoise. 
-                Currently I'm studying at SETU Carlow for my BSc (Hons) in Software Development.</p>
-                
-                <h2>Work Experience</h2>
-                <h3 style="color: #004387;">Workday - King's Dublin</h3>
-                <h4>February 2024 - August 2024</h4>
-                <img src="src\imgs\workdayscanline.png" style="max-width: 40%; height: auto;">
-                <p>I interned at Workday as a Software Development Engineer as a part of my 3rd year university curriculum. Here I was a part of a DevOps team working on the cloud infrastructure. Here I've had the experience to touch on many different technologies such as Kubernetes, Docker, Terraform, AWS and many others.</p>
-                
-                <h3 style="color: goldenrod;">Ballyfin House - Ballyfin</h3>
-                <h4>October 2021 - February 2024</h4>
-                <img src="src/imgs/Logo-Ballyfin-ok-697714587.png" style="max-width: 40%; height: auto;">
-                <p>While working in the hospitality industry, I was employed part-time at Ballyfin House for 2 years, as both a waiter and bartender. Here I worked as a part of a dynamic team where I learned the skills to adapt to challenging siutations, maintain composure under pressure, and consistently provide excellent service. My roles here involved taking requests, relaying information to my team and ensuring customer satisfaction.</p>
-                
-                <h3 style="color: #f80f13;">Supermac's - Portlaoise Plaza</h3>
-                <h4>May 2021 - September 2021</h4>
-                <img src="src/imgs/supermacs.jpg" style="max-width: 40%; height: auto;">
-                <p>For 3 months I worked in Supermac's at Portlaoise Plaza. Here I had a customer-facing role where I had to memorise orders, handle transactions and serve food in a timely manner.</p>
-
+<body class="bg-black text-white">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 arcade-font">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" href="about.html">About Me</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="interests.html">Interests</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </body>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <h1 class="arcade-font text-center mb-5">About Me</h1>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+                <div class="retro-border p-4 mb-4">
+                    <h2 class="arcade-font emphasis">Who am I?</h2>
+                    <p class="lead">My name is Adam Fitzpatrick. I'm a 4th year student currently studying Software Development at SETU Carlow. I'm currently living in Ireland with my family.</p>
+                </div>
+
+                <div class="retro-border p-4 mb-4">
+                    <h2 class="arcade-font emphasis">Education</h2>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <h5 class="emphasis">Primary Education</h5>
+                            <p>Ballyfin N.S.</p>
+                        </li>
+                        <li class="mb-3">
+                            <h5 class="emphasis">Secondary Education</h5>
+                            <p>St. Mary's CBS Portlaoise</p>
+                        </li>
+                        <li>
+                            <h5 class="emphasis">Higher Education</h5>
+                            <p>BSc (Hons) in Software Development at SETU Carlow</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="retro-border p-4">
+                    <h2 class="arcade-font emphasis mb-4">Work Experience</h2>
+
+                    <!-- Workday -->
+                    <div class="mb-5">
+                        <div class="row align-items-center mb-3">
+                            <div class="col-md-4">
+                                <img src="src\imgs\workdayscanline.png" class="img-fluid retro-border" alt="Workday">
+                            </div>
+                            <div class="col-md-8 mt-3 mt-md-0">
+                                <h3 style="color: #004387;">Workday - King's Dublin</h3>
+                                <h4 class="text-muted">February 2024 - August 2024</h4>
+                            </div>
+                        </div>
+                        <p>Interned as a Software Development Engineer working on cloud infrastructure using Kubernetes, Docker, Terraform, AWS, and other technologies.</p>
+                    </div>
+
+                    <!-- Ballyfin House -->
+                    <div class="mb-5">
+                        <div class="row align-items-center mb-3">
+                            <div class="col-md-4">
+                                <img src="src/imgs/Logo-Ballyfin-ok-697714587.png" class="img-fluid retro-border" alt="Ballyfin House">
+                            </div>
+                            <div class="col-md-8 mt-3 mt-md-0">
+                                <h3 style="color: goldenrod;">Ballyfin House - Ballyfin</h3>
+                                <h4 class="text-muted">October 2021 - February 2024</h4>
+                            </div>
+                        </div>
+                        <p>Worked as part-time waiter and bartender, developing skills in team collaboration, customer service, and high-pressure environments.</p>
+                    </div>
+
+                    <!-- Supermac's -->
+                    <div class="mb-5">
+                        <div class="row align-items-center mb-3">
+                            <div class="col-md-4">
+                                <img src="src/imgs/supermacs.jpg" class="img-fluid retro-border" alt="Supermac's">
+                            </div>
+                            <div class="col-md-8 mt-3 mt-md-0">
+                                <h3 style="color: #f80f13;">Supermac's - Portlaoise Plaza</h3>
+                                <h4 class="text-muted">May 2021 - September 2021</h4>
+                            </div>
+                        </div>
+                        <p>Customer-facing role handling orders, transactions, and food service in fast-paced environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

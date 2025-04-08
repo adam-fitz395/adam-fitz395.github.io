@@ -1,81 +1,179 @@
 @font-face {
-    font-family: "This Cafe";
-    src: url("src/font/This Cafe.otf");
-}
-
-@font-face {
-    font-family: "Classica Bold";
-    src: url("src/font/Classica-Bold.ttf");
-}
-
-@font-face {
-    font-family: "Inter";
-    src: url("src/font/Inter-VariableFont_slnt,wght.ttf");
-}
-
-@font-face {
     font-family: "Arcade";
     src: url("src/font/ARCADE_I.TTF");
 }
 
-body {
-    background-color: black;
-    color: white;
-    margin: 0;
-    font-family: 'Inter', sans-serif; /* Fallback font for body */
+/* Custom Styles */
+.arcade-font {
+    font-family: 'Arcade', sans-serif;
 }
 
-.main {
-    font-family: 'Arcade';
-    padding: 6px;
+.retro-border {
+    border: 3px dotted #fff;
+    border-radius: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .emphasis {
     color: #f80f13;
 }
 
-.navbar {
-    display: flex; /* Use flexbox for better alignment */
-    justify-content: left; /* Center navbar items */
-    flex-wrap: wrap; /* Wrap items for smaller screens */
-    padding: 5px; /* Add padding to navbar for spacing */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
 }
 
-.navbar li {
-    font-family: 'Arcade';
-    color: white;
-    display: inline;
-    text-align: center; /* Center text */
-    border: 3px white dotted; /* Optional: border on the navbar */
-    margin: 5px; /* Margin between items */
-    padding: 10px; /* Padding for touch targets */
-    background: rgba(255, 255, 255, 0.1); /* Optional: slight background for visibility */
+.nav-link:hover,
+.nav-link.active {
+    color: #f80f13 !important;
 }
 
-.navbar ul {
-    list-style-type: none;
+.nav-link:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #f80f13;
+    animation: border-glow 1s infinite;
 }
 
-a:visited {
-    color: white;
+@keyframes border-glow {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+@media (max-width: 768px) {
+    .nav-link {
+        margin: 5px 0;
+    }
+}
+
+/* Add to existing styles */
+.retro-border {
+    border: 2px dotted #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.list-unstyled li {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid #f80f13;
+}
+
+.lead {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.text-muted {
+    color: #6c757d!important;
+}
+
+/* Interest Section Colors */
+.interest-videogames { color: darkseagreen; }
+.interest-programming { color: darkmagenta; }
+.interest-music { color: violet; }
+.interest-dnd { color: #ff010a; }
+
+.github-link {
+    color: #6e5494;
     text-decoration: none;
+    position: relative;
 }
 
-img {
-    border: 3px dotted white;
-    max-width: 100%; /* Responsive images */
-    height: auto; /* Maintain aspect ratio */
+.github-link:hover {
+    color: #f80f13;
+    text-decoration: underline;
 }
 
-@media screen and (max-width: 850px) {
-    .navbar {
-        align-items: center; /* Center navbar items */
-    }
+.github-link::after {
+    content: '↗';
+    font-size: 0.8em;
+    margin-left: 2px;
+}
 
-    .navbar li {
-        display: block;
-        margin: 10px 0; /* Vertical spacing */
-        padding: 10px; /* More padding for touch targets */
-        width: 100%; /* Full width for each item */
-    }
+.lead {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.w-75 {
+    width: 75% !important;
+}
+
+/* Project Colors */
+.project-mul-t { color: lightgreen; }
+.project-garage { color: darkred; }
+.project-housing { color: slateblue; }
+.project-cardio { color: coral; }
+.project-spam { color: blue; }
+.project-accident { color: chartreuse; }
+.project-schizo { color: indigo; }
+.project-emotion { color: turquoise; }
+.project-network { color: teal; }
+.project-rps { color: green; }
+.project-melanoma { color: orange; }
+
+.project-card {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #f80f13;
+}
+
+.project-link {
+    color: #6e5494;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.project-link:hover {
+    color: #f80f13;
+    text-decoration: underline;
+}
+
+.project-links {
+    margin-top: auto;
+}
+
+/* Contact Page Styles */
+.contact-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+}
+
+.contact-link {
+    color: #6e5494;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #f80f13;
+    text-decoration: underline;
+}
+
+.social-link {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #f80f13;
+    transform: scale(1.1);
 }

@@ -1,106 +1,175 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Adam's Website - Projects</title>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam's Website - Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <header>
-        <div class = navbar>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="interests.html">Interests</a></li>
-                <li><a href="contact.html">Contacts</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <body>
-        <div class = main>
-            <h1>Projects</h1>
-            <div class ="projects">
-                <p>This section of the website is a showcase of the various different projects I have worked on throughout my career.</p>
-                
-                <h2 style="color: darkred;">Garage System</h2>
-                <p>
-                    This is a GUI website created for a Garage System, that is to be used with a database in the backend.
-                    Four of us worked on this project together but each person had different roles in what they needed to code,
-                    which is laid out in the Project Manual.
-                </p>
-                <a href="https://github.com/adam-fitz395/Garage-System-Website">GitHub Link</a>
-                
-                <h2 style="color: slateblue;">US Housing: Sale vs Assessed Value - Linear Regression Model</h2>
-                <img src="src/imgs/output.png">
-                <p>
-                    This project was created as part of my data science and machine learning module. 
-                    The model predicts the future sale value and assessed values of single family residential housing in the US.
-                </p>
-                <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/Linear%20Regression">GitHub Link</a>
-
-                <h2 style="color:coral;">Cardiovascular Disease Model</h2>
-                <img src="src/imgs/cardio_matrix.png">
-                <p>
-                    The purpose of this project was to create a machine learning model that would be 
-                    able to predict the likelyhood of cardiovascular disease in an individual.
-                </p>
-                <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/Decision%20Tree/Cardiovascular%20Disease%20Model">GitHub Link</a>
-
-                <h2 style="color: blue;">Email Spam Detector</h2>
-                <img src="src/imgs/spam_matrix.png">
-                <p>
-                    The purpose of this project was to create (another) machine learning model 
-                    that can detect whether an email is legitimate or not.
-                </p>
-                <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/Decision%20Tree/Email%20Spam%20Detection%20Model">GitHub Link</a>
-
-                <h2 style="color: chartreuse;">Road Accident Severity Prediction</h2>
-                <img src = "src/imgs/severity.png">
-                <p>
-                    This is a machine learning model that 
-                    can use various elements involved in a crash to predict what the severity of a crash would be.
-                </p>
-                <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/Bayesian%20Classifier/Road%20Accident%20Severity%20Prediction">GitHub Link</a>
-
-                <h2 style="color: indigo;">Schizophrenia Diagnosis Prediction</h2>
-                <p>
-                    This machine learning model tries to predict if a person has 
-                    schizophrenia based on different personal and lifestyle factors.
-                </p>
-                <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/Support%20Vector%20Machines/Schizophrenia">GitHub Link</a>
-
-                <h2 style="color: turquoise;">Emotion Detection</h2>
-                <p>
-                    The purpose of this project was to create a machine learning model 
-                    that attempts to detect patterns in faces to predict emotions.
-                </p>
-                <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/K%20Means%20Cluster">GitHub Link</a>
-
-                <h2 style="color: teal;">Network Port Prediction</h2>
-                <p>
-                    The purpose of this project was to create a machine learning model that can use 
-                    different information about network traffic to try and predict what port the traffic is coming from.
-                </p>
-                <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/K%20Nearest%20Neighbour/Network%20Port%20Prediction">GitHub Link</a>
-
-                <h2 style="color: green;">Rock Paper Scissors Neural Network</h2>
-                <img src="src/imgs/rps.png">
-                <p>
-                    This project aims to create a Convolutional Neural Network that is capable of accurately recognizing 
-                    and classifying hand gestures in rock, paper, scissors games.
-                </p>
-                <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/Neural%20Networks/CNN">GitHub Link</a>
-
-                <h2 style="color: orange;">Melanoma Cancer Detection</h2>
-                <img src="src/imgs/lesions.png">
-                <p>
-                    This machine learning project aims to attempt to predict whether a lesion is benign or malignant using a Multi-layer Perceptron (MLP) model.
-                </p>
-                <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/Neural%20Networks/Melanoma%20Cancer%20Detection">GitHub Link</a>
+<body class="bg-black text-white">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 arcade-font">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="about.html">About Me</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="interests.html">Interests</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </body>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <h1 class="arcade-font text-center mb-5">Projects</h1>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <p class="lead text-center mb-5">A showcase of various projects I've worked on throughout my career.</p>
+
+                <div class="row g-4">
+                    <!-- Project Cards -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-card retro-border h-100 p-3">
+                            <h3 class="project-mul-t">MUL-T</h3>
+                            <p>Multi-tool designed for red team pen-testing with various utilities.</p>
+                            <div class="project-links">
+                                <a href="mul-t/index.html" class="project-link">Project Link</a>
+                                <a href="https://github.com/adam-fitz395/MUL-T" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-card retro-border h-100 p-3">
+                            <h3 class="project-garage">Garage System</h3>
+                            <p>A GUI for a garage management system with a backend database.</p>
+                            <a href="https://github.com/adam-fitz395/Garage-System-Website" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-card retro-border h-100 p-3">
+                            <h3 class="project-housing">US Housing Value Model</h3>
+                            <img src="src/imgs/output.png" class="img-fluid retro-border mb-2">
+                            <p>Linear regression model predicting US housing values.</p>
+                            <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/Linear%20Regression" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Add other projects following the same pattern -->
+                    <!-- Cardiovascular Disease Model -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-card retro-border h-100 p-3">
+                            <h3 class="project-cardio">Cardiovascular Disease Prediction Model</h3>
+                            <img src="src/imgs/cardio_matrix.png" class="img-fluid retro-border mb-2">
+                            <p>Predicting likelihood of cardiovascular disease.</p>
+                            <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/Decision%20Tree/Cardiovascular%20Disease%20Model" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Email Spam Detector -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-card retro-border h-100 p-3">
+                            <h3 class="project-spam">Spam Email Detector</h3>
+                            <img src="src/imgs/spam_matrix.png" class="img-fluid retro-border mb-2">
+                            <p>ML model for email spam detection.</p>
+                            <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/Decision%20Tree/Email%20Spam%20Detection%20Model" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Road Accident Severity Prediction -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card retro-border h-100 p-3">
+                        <h3 class="project-accident">Road Accident Severity Prediction</h3>
+                        <img src="src/imgs/severity.png" class="img-fluid retro-border mb-2">
+                        <p>ML model predicting crash severity using various crash elements.</p>
+                        <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/Bayesian%20Classifier/Road%20Accident%20Severity%20Prediction" 
+                        class="project-link" 
+                        target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Schizophrenia Diagnosis Prediction -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card retro-border h-100 p-3">
+                        <h3 class="project-schizo">Schizophrenia Diagnosis Prediction</h3>
+                        <p>ML model predicting schizophrenia based on personal/lifestyle factors.</p>
+                        <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/Support%20Vector%20Machines/Schizophrenia" 
+                        class="project-link" 
+                        target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Emotion Detection -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card retro-border h-100 p-3">
+                        <h3 class="project-emotion">Emotion Detection</h3>
+                        <p>ML model detecting emotional patterns in facial features.</p>
+                        <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/K%20Means%20Cluster" 
+                        class="project-link" 
+                        target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Network Port Prediction -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card retro-border h-100 p-3">
+                        <h3 class="project-network">Network Port Prediction</h3>
+                        <p>ML model predicting network traffic ports using traffic data.</p>
+                        <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/K%20Nearest%20Neighbour/Network%20Port%20Prediction" 
+                        class="project-link" 
+                        target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Rock Paper Scissors Neural Network -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card retro-border h-100 p-3">
+                        <h3 class="project-rps">Rock Paper Scissors CNN</h3>
+                        <img src="src/imgs/rps.png" class="img-fluid retro-border mb-2">
+                        <p>Convolutional Neural Network for hand gesture recognition.</p>
+                        <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/Neural%20Networks/CNN" 
+                        class="project-link" 
+                        target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Melanoma Cancer Detection -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card retro-border h-100 p-3">
+                        <h3 class="project-melanoma">Melanoma Detection</h3>
+                        <img src="src/imgs/lesions.png" class="img-fluid retro-border mb-2">
+                        <p>MLP model classifying skin lesions as benign/malignant.</p>
+                        <a href="https://github.com/adam-fitz395/ML-Projects/tree/main/Neural%20Networks/Melanoma%20Cancer%20Detection" 
+                        class="project-link" 
+                        target="_blank">GitHub</a>
+                    </div>
+                </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
