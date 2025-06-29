@@ -111,15 +111,8 @@
 /* Project Colors */
 .project-mul-t { color: lightgreen; }
 .project-garage { color: darkred; }
-.project-housing { color: slateblue; }
-.project-cardio { color: coral; }
-.project-spam { color: blue; }
-.project-accident { color: chartreuse; }
-.project-schizo { color: indigo; }
-.project-emotion { color: turquoise; }
-.project-network { color: teal; }
-.project-rps { color: green; }
-.project-melanoma { color: orange; }
+.project-machine { color: orange; }
+.project-collector {color: blue;}
 
 .project-card {
     transition: transform 0.3s ease;
