@@ -1,4 +1,4 @@
-name: Deploy Main Site and Blog
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -30,13 +30,14 @@ jobs:
           extended: true
 
       - name: Build Hugo blog
-        run: hugo --source blog --destination ./public/blog
+        run: |
+          cd blog
+          hugo --minify --destination ../public/blog
 
       - name: Copy main site files
         run: |
           mkdir -p public
-          # Copy all HTML, CSS files to public directory
-          cp -r *.html *.css public/ 2>/dev/null || true
+          cp -r main-site/* public/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
