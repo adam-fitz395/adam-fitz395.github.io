@@ -1,9 +1,11 @@
-baseURL = 'https://adam-fitz395/blog'
+baseURL = 'https://adam-fitz395.github.io/public/'
 languageCode = 'en-us'
 title = 'My Blog'
 theme        = "hello-friend-ng"
-paginate     = 10
 
+[pagination]
+  pagerSize = 10
+  
 [params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
