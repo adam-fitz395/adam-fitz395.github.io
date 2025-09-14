@@ -1,9 +1,8 @@
-name: Deploy Hugo Blog
+name: Deploy Main Site and Blog
 
 on:
   push:
     branches: ["main"]
-    paths: ["blog/**"]  # Only run when blog content changes
   workflow_dispatch:
 
 permissions:
@@ -22,7 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive  # Important for Hugo themes
+          submodules: recursive
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -30,13 +29,14 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build Hugo site
-        run: hugo --source blog --destination ../public/blog
+      - name: Build Hugo blog
+        run: hugo --source blog --destination ./public/blog
 
       - name: Copy main site files
         run: |
           mkdir -p public
-          cp -r main-site/* public/  # Assuming your main site is in "main-site" folder
+          # Copy all HTML, CSS files to public directory
+          cp -r *.html *.css public/ 2>/dev/null || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
