@@ -1,7 +1,7 @@
 baseURL = "https://adam-fitz395.github.io/blog/"
 languageCode = 'en-us'
 title = 'My Blog'
-theme        = "hello-friend-ng"
+theme = "hello-friend-ng"
 
 [pagination]
   pagerSize = 10
