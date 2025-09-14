@@ -23,13 +23,6 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Debug - List directory structure
-        run: |
-          echo "Current directory structure:"
-          ls -la
-          echo "Main-site contents:"
-          ls -la main-site/ || echo "main-site directory doesn't exist"
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -44,20 +37,8 @@ jobs:
       - name: Copy main site files
         run: |
           mkdir -p public
-          # Check if main-site exists and has files
-          if [ -d "main-site" ]; then
-            echo "Copying files from main-site to public"
-            cp -r main-site/. public/  # This copies all contents including hidden files
-          else
-            echo "ERROR: main-site directory not found!"
-            ls -la
-            exit 1
-          fi
-
-      - name: Verify copied files
-        run: |
-          echo "Contents of public directory:"
-          ls -la public/
+          # Copy from "main" directory instead of "main-site"
+          cp -r main/. public/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
