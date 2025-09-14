@@ -1,18 +1,9 @@
-name: Deploy to GitHub Pages
+name: Deploy Blog
 
 on:
   push:
     branches: ["main"]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+    paths: ["blog/**"]
 
 jobs:
   build:
@@ -22,29 +13,19 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           extended: true
-
-      - name: Build Hugo blog
+      - name: Build
         run: |
           cd blog
-          hugo --minify --destination ../public/blog
-
-      - name: Copy main site files
-        run: |
-          mkdir -p public
-          # Copy from "main" directory instead of "main-site"
-          cp -r main/. public/
-
+          hugo --minify
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
-
+          path: "blog/public"
   deploy:
     environment:
       name: github-pages

@@ -1,4 +1,4 @@
-baseURL = 'https://yourusername.github.io/blog/'
+baseURL = "https://adam-fitz395.github.io/blog/"
 languageCode = 'en-us'
 title = 'My Blog'
 theme        = "hello-friend-ng"

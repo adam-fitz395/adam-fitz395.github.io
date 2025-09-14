@@ -1,24 +1,12 @@
-name: Deploy static content to Pages
+name: Deploy Main Site
 
 on:
   push:
     branches: ["main"]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+    paths: ["main/**"]
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -28,7 +16,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './main'  # Updated to point to your subfolder
+          path: "main"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
