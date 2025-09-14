@@ -30,13 +30,36 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Find Hugo config
+        id: find-config
+        run: |
+          # Look for Hugo configuration files in the adam-blog directory
+          if [ -f "adam-blog/hugo.toml" ]; then
+            echo "config_file=adam-blog/hugo.toml" >> $GITHUB_OUTPUT
+          elif [ -f "adam-blog/hugo.yaml" ]; then
+            echo "config_file=adam-blog/hugo.yaml" >> $GITHUB_OUTPUT
+          elif [ -f "adam-blog/hugo.yml" ]; then
+            echo "config_file=adam-blog/hugo.yml" >> $GITHUB_OUTPUT
+          elif [ -f "adam-blog/config.toml" ]; then
+            echo "config_file=adam-blog/config.toml" >> $GITHUB_OUTPUT
+          elif [ -f "adam-blog/config.yaml" ]; then
+            echo "config_file=adam-blog/config.yaml" >> $GITHUB_OUTPUT
+          elif [ -f "adam-blog/config.yml" ]; then
+            echo "config_file=adam-blog/config.yml" >> $GITHUB_OUTPUT
+          else
+            echo "No Hugo config file found in adam-blog directory"
+            exit 1
+          fi
+
       - name: Build with Hugo
-        run: hugo --minify
+        run: |
+          cd adam-blog
+          hugo --minify --config "${{ steps.find-config.outputs.config_file }}"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./adam-blog/public  # Upload the built site
+          path: ./adam-blog/public
 
   deploy:
     environment:
