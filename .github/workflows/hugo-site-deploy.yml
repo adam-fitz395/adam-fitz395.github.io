@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./adam-blog  # Work from the adam-blog directory
+        working-directory: adam-blog  # Work from the adam-blog directory
     steps:
       - name: Checkout
         uses: actions/checkout@v4
